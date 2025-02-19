@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Segmentation</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { margin-top: 50px; }
+        input { margin: 10px; padding: 10px; width: 200px; }
+        button { padding: 10px; }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h2>Customer Segmentation Prediction</h2>
-        <form action="/predict" method="POST">
-            <label for="income">Annual Income ($k):</label>
-            <input type="number" name="income" required>
-
-            <label for="score">Spending Score (1-100):</label>
-            <input type="number" name="score" required>
-
-            <label for="age">Age:</label>
-            <input type="number" name="age" required>
-
+        <h1>Customer Segmentation using KMeans</h1>
+        <form action="/predict" method="post">
+            <input type="text" name="age" placeholder="Enter Age" required><br>
+            <input type="text" name="income" placeholder="Enter Annual Income (k$)" required><br>
+            <input type="text" name="spending_score" placeholder="Enter Spending Score (1-100)" required><br>
             <button type="submit">Predict</button>
         </form>
-
         {% if prediction %}
-            <h3>{{ prediction }}</h3>
+            <h2>{{ prediction }}</h2>
         {% endif %}
     </div>
 </body>
