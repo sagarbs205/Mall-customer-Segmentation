@@ -86,3 +86,5 @@ This project is licensed under the MIT License.
 **Author:** SAGAR B S 
 **GitHub:** [sagarbs205](https://github.com/sagarbs205)
 
+### Contact:
+For queries or suggestions, email [sagarsagarsagar795@gmail.com].
